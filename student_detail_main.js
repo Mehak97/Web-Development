@@ -1,7 +1,7 @@
 let addUser =false;
 let deleteUser = false;
 let searchUser= false;
-let editUser=false;
+//let editUser=false;
 
 var search=() =>
 {
