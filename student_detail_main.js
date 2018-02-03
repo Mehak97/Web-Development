@@ -1,24 +1,25 @@
-var addUser =false;
-var deleteUser = false;
-//var updateUser = false;
-var searchUser= false;
-var editUser=false;
+let addUser =false;
+let deleteUser = false;
+let searchUser= false;
+let editUser=false;
 
-function search()
+var search=() =>
 {
    addUser = false;
    deleteUser = false;
    searchUser=true;
    editUser=false;
-   $("#submit_button button:disabled");
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#tableid tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
+   const box = document.querySelector('#myInput');
+   box.addEventListener('keyup',function()
+      {
+        let value = $(this).val().toLowerCase();
+        $("#tableid tr").filter(function()
+         {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+         });
+      });
 }
-function hide()
+var hide=() =>
 {
   addUser = false;
   deleteUser = true;
@@ -28,7 +29,7 @@ function hide()
    // $('td:nth-child(4)').hide();
    // $('td:nth-child(3)').hide();
 }
-function insert()
+var insert=() =>
 {
     addUser = true;
     deleteUser = false;
@@ -36,35 +37,38 @@ function insert()
     searchUser=false;
     editUser=false;
 }
-function edit()
+var edit=() =>
 {
+ 
+  alert('Double click on table cell to be edited');
   addUser = false;
   deleteUser = false;
   searchUser=false;
   editUser=true;
-$("td").dblclick(function () 
-{ 
-  var OriginalContent = $(this).text();
-   $(this).addClass("cellEditing");
-   $(this).html("<input type='text' value='" /*+ OriginalContent*/ + "' />"); 
-   $(this).children().first().focus(); 
-   $(this).children().first().keypress(function (e)
-    { 
-      if (e.which == 13) //unicode for enter button=13 and event.which returns the value of key pressed
-       { 
-        var newContent = $(this).val(); 
-        $(this).parent().text(newContent); 
-        $(this).parent().removeClass("cellEditing");
-       } 
-      });
+  $("td").dblclick(function () 
+  { 
+    let OriginalContent = $(this).text();
+    $(this).addClass("cellEditing");
+    $(this).html("<input type='text' value='" /*+ OriginalContent*/ + "' />"); 
+    $(this).children().first().focus(); 
+    $(this).children().first().keypress(function (e)
+     { 
+        if (e.which == 13) //unicode for 'enter' button=13 and event.which returns the value of key pressed
+          { 
+             let newContent = $(this).val(); 
+             $(this).parent().text(newContent); 
+             $(this).parent().removeClass("cellEditing");
+          } 
+     });
        $(this).children().first().blur(function()
        {
           $(this).parent().text(OriginalContent);
            $(this).parent().removeClass("cellEditing");
-         }); 
-        }); 
+       }); 
+  }); 
  }
- function submitUserAction() 
+ 
+ var final= submitUserAction=() => 
  {
     if(addUser)
      {
@@ -89,12 +93,12 @@ $("td").dblclick(function ()
     {
         $("#tableid input:checkbox:checked").closest('tr').remove();
     }
-    /*if(searchUser)
+    if(searchUser)
     {
       $("#submit_button button:disabled");
-    }*/
+    }
     if(editUser)
     {
-     
+       $("#edit_button button:disabled");
     }
  }
