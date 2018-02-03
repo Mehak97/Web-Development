@@ -12,13 +12,25 @@
 {
     background-color: pink;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 61e366934a0428195dfdf6ef95731e618023a8a7
 .side_bar
 {
     left:0px;
     top:200px;
 }
+<<<<<<< HEAD
 /*body
 {
     background-image: url("https://uploads.strikinglycdn.com/static/backgrounds/business-2/144.jpg");
 }*/
 /*social sites link is added using social site kit/*
+=======
+body
+{
+    background-image: url("https://uploads.strikinglycdn.com/static/backgrounds/business-2/144.jpg");
+}
+/*social sites link is added using social site kit/*
+>>>>>>> 61e366934a0428195dfdf6ef95731e618023a8a7
