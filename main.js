@@ -1,11 +1,7 @@
 let addUser =false;
 let deleteUser = false;
 let searchUser= false;
-<<<<<<< HEAD
-//let editUser=false;
-=======
 let editUser=false;
->>>>>>> 61e366934a0428195dfdf6ef95731e618023a8a7
 
 var search=() =>
 {
@@ -14,7 +10,6 @@ var search=() =>
    searchUser=true;
    editUser=false;
    const box = document.querySelector('#myInput');
-<<<<<<< HEAD
    box.addEventListener('keyup',function()
       {
         let value = $(this).val().toLowerCase();
@@ -23,7 +18,6 @@ var search=() =>
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
          });
       });
-=======
    box.addEventListener('keyup', function()
     {
       let value = $(this).val().toLowerCase();
@@ -31,7 +25,6 @@ var search=() =>
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
->>>>>>> 61e366934a0428195dfdf6ef95731e618023a8a7
 }
 var hide=() =>
 {
@@ -53,7 +46,6 @@ var edit=() =>
   alert('Double click on table cell to be edited');
   addUser = false;
   deleteUser = false;
-<<<<<<< HEAD
   searchUser=false;
   editUser=true;
   $("td").dblclick(function () 
@@ -71,7 +63,6 @@ var edit=() =>
              $(this).parent().removeClass("cellEditing");
           } 
      });
-=======
   searchUser= false;
   editUser= true;
 $("td").dblclick(function () 
@@ -89,7 +80,6 @@ $("td").dblclick(function ()
         $(this).parent().removeClass("cellEditing");
        } 
       });
->>>>>>> 61e366934a0428195dfdf6ef95731e618023a8a7
        $(this).children().first().blur(function()
        {
           $(this).parent().text(OriginalContent);
@@ -129,10 +119,6 @@ $("td").dblclick(function ()
     }
     if(editUser)
     {
-<<<<<<< HEAD
        $("#edit_button button:disabled");
-=======
-      $("#submit_button button:disabled");
->>>>>>> 61e366934a0428195dfdf6ef95731e618023a8a7
     }
  }
