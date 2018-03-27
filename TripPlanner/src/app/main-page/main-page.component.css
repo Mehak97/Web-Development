@@ -1,13 +1,129 @@
 .form_plans
 {
     background-color: burlywood;
-    padding: 12px;
-    margin:12px
+   padding: 10px;
+    margin:10px
 }
  
 input
 {
-    padding:10px;
-    margin:12px
+    padding:7px;
+    margin:10px
 }
 
+h2
+{
+  text-align: center
+  }
+
+
+body{
+    padding: 100px 0;
+    }
+    .no-padding{
+    padding: 0;
+    }
+    .form-wrapper{
+    max-width: 1000px;
+    /*background: #496848;*/
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+    }
+    .form-wrapper:after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 200%;
+    height: 50%;
+    /*left: -7%;*/
+    bottom: 0;
+    /*z-index: 1;
+    background: #f0f0f0;*/
+    transform:rotate(-30deg);
+    }
+    @media(max-width: 1000px){
+    .form-wrapper:after{
+    height: 40%;
+   /* left: -7%;*/
+    }
+    }
+    @media(max-width: 540px){
+    .form-wrapper:after{
+    height: 25%;
+    }
+    }
+    @media(max-width: 340px){
+    .form-wrapper:after{
+    height: 20%;
+    }
+    }
+    .form-wrapper .my-form{
+    width: 100%;
+    overflow: auto;
+    margin: 0 auto;
+    background: #496848;
+    position: relative;
+    /*z-index: 9;*/
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    }
+    .my-form .info{
+    padding: 15px;
+    height: 100%;
+        margin: 0;
+    bottom: 50px;
+    right: 0;
+    left: 0;
+    }
+    .my-form .carousel-indicators .active{
+    background: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.5)
+    }
+    .my-form .item{
+    padding: 60px 0;
+    min-height: 300px;
+    }
+    .my-form .form-bg{
+    background: #fff;
+    }
+    .main-form .nav > li{
+    width: 50%;
+    }
+    .main-form .nav-tabs > li > a{
+    border-radius: 0;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    outline: 0;
+    text-transform: uppercase;
+    color: #fc80b2;
+    font-weight: 600;
+    font-size: 13px;
+    }
+    .main-form .nav-tabs > li > a:hover{
+    color: #fc80b2;
+    }
+    .main-form .form-control{
+    margin-top: 15px;
+    height: 50px;
+    border-radius: 0;
+    box-shadow: none;
+    border:1px solid #f0f0f0;
+    }
+    .main-form .form-control:focus{
+    border-color: #fc80b2;
+    }
+    .main-form .btn-submit{
+    display: block;
+    background: #fc80b2;
+    color: #fff;
+    border-radius: 0;
+    width: 100%;
+    text-transform: uppercase;
+    margin-top: 15px;
+    padding: 12px;
+    }
+    .main-form .tab-content{
+    padding: 60px 0;
+    }

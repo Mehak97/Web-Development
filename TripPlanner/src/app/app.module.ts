@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {CalendarModule} from 'primeng/calendar';
+import {CarouselModule} from 'primeng/carousel';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,6 +14,7 @@ import { FavouriteSpotsComponent } from './favourite-spots/favourite-spots.compo
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule,Routes} from '@angular/router';
 import { CalendarDemoComponent } from './calendar-demo/calendar-demo.component';
+import { ParisDetailsComponent } from './paris-details/paris-details.component';
 
 
 const appRoute:Routes=[
@@ -21,7 +25,7 @@ const appRoute:Routes=[
     path:'home' , component:MainPageComponent
   },
   {
-    path:'Paris',component:FavouriteSpotsComponent
+    path:'Paris',component:ParisDetailsComponent
   },
   {
     path:'Dubai',component:FavouriteSpotsComponent
@@ -43,6 +47,9 @@ const appRoute:Routes=[
   },
   {
     path:'London',component:FavouriteSpotsComponent
+  },
+  {
+    path:'Signup',component:HeaderComponent
   }
 ]
 
@@ -54,13 +61,15 @@ const appRoute:Routes=[
     MainPageComponent,
     FavouriteSpotsComponent,
     CalendarDemoComponent,
+    ParisDetailsComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoute),
     HttpClientModule,
     CalendarModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
