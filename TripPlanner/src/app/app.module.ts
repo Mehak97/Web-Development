@@ -14,7 +14,6 @@ import { FavouriteSpotsComponent } from './favourite-spots/favourite-spots.compo
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule,Routes} from '@angular/router';
 import { CalendarDemoComponent } from './calendar-demo/calendar-demo.component';
-import { ParisDetailsComponent } from './paris-details/paris-details.component';
 
 
 const appRoute:Routes=[
@@ -25,7 +24,7 @@ const appRoute:Routes=[
     path:'home' , component:MainPageComponent
   },
   {
-    path:'Paris',component:ParisDetailsComponent
+    path:'Paris',component:FavouriteSpotsComponent
   },
   {
     path:'Dubai',component:FavouriteSpotsComponent
@@ -61,7 +60,6 @@ const appRoute:Routes=[
     MainPageComponent,
     FavouriteSpotsComponent,
     CalendarDemoComponent,
-    ParisDetailsComponent,
   ],
   imports: [
     BrowserModule,
