@@ -5,7 +5,7 @@ import {CalendarModule} from 'primeng/calendar';
 import {CarouselModule} from 'primeng/carousel';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-
+import { MDBBootstrapModule } from '@angular/cli';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -14,6 +14,7 @@ import { FavouriteSpotsComponent } from './favourite-spots/favourite-spots.compo
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule,Routes} from '@angular/router';
 import { CalendarDemoComponent } from './calendar-demo/calendar-demo.component';
+import { LoginInfoComponent } from './login-info/login-info.component';
 
 
 const appRoute:Routes=[
@@ -48,7 +49,7 @@ const appRoute:Routes=[
     path:'London',component:FavouriteSpotsComponent
   },
   {
-    path:'Signup',component:HeaderComponent
+    path:'Signup',component:LoginInfoComponent
   }
 ]
 
@@ -60,6 +61,8 @@ const appRoute:Routes=[
     MainPageComponent,
     FavouriteSpotsComponent,
     CalendarDemoComponent,
+    LoginInfoComponent,
+    MDBBootstrapModule.forRoot()
   ],
   imports: [
     BrowserModule,
