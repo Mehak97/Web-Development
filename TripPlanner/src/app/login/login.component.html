@@ -1,0 +1,110 @@
+<!--<form>
+    <p class="h4 text-center mb-4">Sign in</p>
+
+    <div class="md-form">
+        <i class="fa fa-envelope prefix grey-text"></i>
+        <input type="email" id="materialFormLoginEmailEx" class="form-control">
+        <label for="materialFormLoginEmailEx">Your email</label>
+    </div>
+
+    <div class="md-form">
+        <i class="fa fa-lock prefix grey-text"></i>
+        <input type="password" id="materialFormLoginPasswordEx" class="form-control">
+        <label for="materialFormLoginPasswordEx">Your password</label>
+    </div>
+
+    <div class="text-center mt-4">
+        <button class="btn btn-default" type="submit">Login</button>
+    </div>
+</form>
+ -->
+
+<!--<div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog cascading-modal" role="document">
+    <div class="modal-content">
+
+
+      <div class="modal-header primary-color white-text">
+        <h4 class="title">
+          <i class="fa fa-pencil"></i> Contact form</h4>
+        <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="md-form form-sm">
+          <i class="fa fa-envelope prefix"></i>
+          <input type="text" id="materialFormNameModalEx1" class="form-control form-control-sm">
+          <label for="materialFormNameModalEx1">Your name</label>
+        </div>
+
+
+        <div class="md-form form-sm">
+          <i class="fa fa-lock prefix"></i>
+          <input type="password" id="materialFormEmailModalEx1" class="form-control form-control-sm">
+          <label for="materialFormEmailModalEx1">Your email</label>
+        </div>
+
+
+        <div class="md-form form-sm">
+          <i class="fa fa-tag prefix"></i>
+          <input type="text" id="materialFormSubjectModalEx1" class="form-control form-control-sm">
+          <label for="materialFormSubjectModalEx1">Subject</label>
+        </div>
+
+
+        <div class="md-form form-sm">
+          <i class="fa fa-pencil prefix"></i>
+          <textarea type="text" id="materialFormMessageModalEx1" class="md-textarea form-control"></textarea>
+          <label for="materialFormMessageModalEx1">Your message</label>
+        </div>
+
+        <div class="text-center mt-4 mb-2">
+          <button class="btn btn-primary">Send
+            <i class="fa fa-send ml-2"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>-->
+
+<section class="login">
+    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #loginForm='ngForm' (ngSubmit)="submit(loginForm)">
+      
+        <mat-form-field>
+            <input matInput 
+            type="email" 
+            placeholder="Email" 
+            ngModel 
+            name="email" 
+            email 
+            required
+            #mail="ngModel">
+            <mat-error *ngIf="mail.hasError('required')">Email must not be empty</mat-error>
+            <mat-error *ngIf="!mail.hasError('required')">Enter valid Email</mat-error>
+          </mat-form-field>
+          
+          <mat-form-field>
+              <input matInput 
+              type="password" 
+              placeholder="Password" 
+              ngModel   
+              name="password" 
+              required 
+              minlength="7" 
+              #pw="ngModel" 
+              [type]="hide ? 'password' : 'text'">
+              <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+              <!--<mat-error>Password should contain atleast 7 characters</mat-error>-->
+              <mat-error>Enter valid Password</mat-error>
+          </mat-form-field>
+      
+      <button *ngIf=" !isLoading "  type="submit" mat-raised-button color="primary" [disabled]="loginForm.invalid" >Submit</button>
+
+      <mat-spinner *ngIf=" isLoading "></mat-spinner>
+    </form>
+  </section>

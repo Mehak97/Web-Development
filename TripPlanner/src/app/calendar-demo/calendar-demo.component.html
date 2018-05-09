@@ -1,17 +1,10 @@
-
-
-
-<!-- readOnlyInput==true doesnot allow to entr dates amnually-->
-
-
-<div class="ui-g-12 ui-md-4 calendar">
-    <p-calendar [(ngModel)]="date6" [monthNavigator]="true" [yearNavigator]="true" yearRange="2015:2040" placeholder="enter starting date"></p-calendar> 
+<!--<div class="ui-g-12 ui-md-4 calendar">
+    <p-calendar [(ngModel)]="date6" [monthNavigator]="true" [yearNavigator]="true" yearRange="2015:2050" placeholder="enter starting date"></p-calendar>
 </div>
 <br>
 <div class="ui-g-12 ui-md-4 calendar">
-    <p-calendar [(ngModel)]="date5" [monthNavigator]="true" [yearNavigator]="true" yearRange="2015:2040" placeholder="enter ending date"></p-calendar> 
-</div>
-<!--<div class="ui-g-12 ui-md-4">
-    <h3>Range</h3>
-    <p-calendar [(ngModel)]="rangeDates" selectionMode="range" readonlyInput="true"></p-calendar>
+    <p-calendar [(ngModel)]="date5" [monthNavigator]="true" [yearNavigator]="true" yearRange="2015:2050" placeholder="enter ending date"></p-calendar>
 </div>-->
+<div class="ui-g-12 ui-md-4">
+    <p-calendar [(ngModel)]="rangeDates" selectionMode="range" readonlyInput="true" placeholder="Enter your Dates"></p-calendar>
+</div>
